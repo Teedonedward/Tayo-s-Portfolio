@@ -48,6 +48,24 @@ body {
     display: flex;
     margin: auto;
     padding: 10px;
+    animation: slide-in 1500ms 50ms ease-in;
+}
+
+@keyframes slide-in {
+    0% {
+        display: none;
+        opacity: 0;
+        margin-right: 0px;
+    }
+    50% {
+        display: flex;
+        opacity: 0.1;
+        margin-right: 515px;
+    }
+    100% {
+        display: flex;
+        margin: auto;
+    }
 }
 
 .dp {
@@ -69,13 +87,28 @@ body {
     background-blend-mode: multiply;
     border-radius: 15px;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.95);
+    animation: appear 2000ms ease-in;
+}
+
+@keyframes appear {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    50% {
+        display: flex;
+        opacity: 0.5;
+    }
+    100% {
+        display: flex;
+        opacity: 1;
+    }
 }
 
 .h1 {
     width: 80%;
     color: var(--White);
-    background-image: rgb(0, 0, 0);
-    background-color: #dd9f0e09;
+    background-color: rgba(0, 0, 0, 0.25);
     background-blend-mode: multiply;
     padding: 15px 10px;
     margin: 5px auto;
@@ -107,7 +140,8 @@ body {
     font-size: 15px;
     text-transform: uppercase;
     text-align: center;
-    background: #dd9f0e;
+    background: #dd9f0e44;
+    background-blend-mode: multiply;
     color: rgba(0, 0, 0, 0.85);
     border-radius: 15px;
     box-shadow: 1px 1px 4px var(--Black),
@@ -145,7 +179,7 @@ body {
     font-size: 15px;
     text-transform: uppercase;
     text-align: center;
-    background: rgba(0, 0, 0, 0.75);
+    background: #dd9f0e15;
     background-blend-mode: multiply;
     color: #dd9f0e;
     border-radius: 15px;
@@ -299,35 +333,40 @@ body {
     transition: all 500ms ease-in;
 }
 
-.experience ul {
-    width: 80%;
-    background: rgba(0, 0, 0, 0.75);
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px auto;
-    box-shadow: 5px 5px 8px var(--Black),
-                -1px -1px 3px rgba(0, 0, 0, 0.35);
-    isolation: isolate;
-    position: relative;
+.job-experience {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
-.experience ul::before {
+.job-experience ul {
+    padding: 20px 40px;
+    margin: 20px auto;
+    background-color: #ffffffe1;
+    border-radius: 15px;
+    box-shadow: 5px 5px 8px var(--Black),
+                -1px -1px 3px rgba(0, 0, 0, 0.35);
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+/*.job-experience::before {
     content: "";
     width: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     position: absolute;
-    /*z-index: -2;*/
+    z-index: -2;
+}*/
+
+.job-experience li {
+    background: rgba(0, 0, 0, 0.055);
+    background-blend-mode: multiply;
+    border-radius: 15px;
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.75),
+                0px 1px 3px rgba(0, 0, 0, 0.75);
 }
 
-.experience li {
-    background: rgba(0, 0, 0, 0.55);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    box-shadow: -2px -3px 6px var(--Black),
-                2px 1px 6px var(--Black);
-}
-
-.experience ul li, .certifications ul li {
+.job-experience ul li, .certifications ul li {
     width: 100%;
     display: inline-block;
     text-decoration: none;
@@ -338,19 +377,19 @@ body {
     border-bottom: 1px solid var(--Gold);
 }
 
-.experience ul li span {
+.job-experience ul li span {
     width: 150px;
     font-size: 10px;
-    color: var(--Gold);
+    color: var(--Black);
     padding-left: 20px;
     float: right;
-    border-left: 1px solid var(--Black);
+    border-left: 2px solid var(--Black);
 }
 
-.experience p {
+.job-experience p {
     text-align: justify;
     padding: 20px;
-    color: var(--White);
+    color: var(--Grey);
 }
 
 .skills {
