@@ -300,13 +300,23 @@ body {
 }
 
 .experience ul {
-    width: 90%;
+    width: 80%;
     background: rgba(0, 0, 0, 0.75);
     border-radius: 15px;
     padding: 20px;
-    margin:20px auto;
+    margin: 20px auto;
     box-shadow: 5px 5px 8px var(--Black),
                 -1px -1px 3px rgba(0, 0, 0, 0.35);
+    isolation: isolate;
+    position: relative;
+}
+
+.experience ul::before {
+    content: "";
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    /*z-index: -2;*/
 }
 
 .experience li {
