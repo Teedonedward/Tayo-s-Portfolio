@@ -301,6 +301,57 @@ body {
     z-index: 100;
 }*/
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin: auto;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-left: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts span {
+    font-size: 25px;
+    color: var(--Black);
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.contacts section {
+    font-size: 22px;
+    color: var(--White);
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.socials {
+    margin: auto;
+}
+
+.socials ul {
+    display: flex;
+    padding: 10px;
+}
+
+.socials ul li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.socials ul li a {
+    color: var(--Gold);
+    text-decoration: none;
+}
+
 .cv-tab {
     display: flex;
     width: 100%;
@@ -462,7 +513,7 @@ section h3 {
 .job-experience section ul li {
     list-style-type: circle;
     color: var(--Grey);
-    font-size: 14px;
+    font-size: 14px; 
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 20px;
