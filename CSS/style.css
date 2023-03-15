@@ -536,19 +536,25 @@ section h3 {
 .skills ul {
     display: flex;
     margin: 10px;
+    padding: 0px 150px;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills ul li {
     color: var(--White);
     list-style-type: none;
-    width: 10%;
-    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 7%;
+    margin: 0 auto;
 }
 
 .skills img {
-    width: 100%;
-    margin: 5px;
-    padding: 0 10px;
+    width: 60%;
+    margin: 5px auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .certifications {
