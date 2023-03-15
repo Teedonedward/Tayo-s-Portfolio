@@ -395,7 +395,7 @@ body {
     color: #dd9f0e;
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.75);
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.75);
     background-color: #ffffffe1;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -411,14 +411,15 @@ body {
     padding: 15px;
     padding-left: 40px;
     margin: 20px;
+    margin-left: 0;
     color: #dd9f0e;
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.75);
-    background-color: #ffffffe1;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.75);
+    background-color: #f0f0f0cc;
     border-radius: 15px;
-    box-shadow: 5px 5px 8px var(--Black),
-                -1px -1px 3px rgba(0, 0, 0, 0.35);
+    box-shadow: 2px 2px 3px var(--Grey),
+                1px 1px 3px var(--Grey);
     position: relative;
     background-blend-mode: multiply;
 }
@@ -518,6 +519,15 @@ section h3 {
     padding-bottom: 0;
     padding-left: 20px;
     border: none;
+    font-weight: unset;
+    line-height: 1.5em;
+}
+
+.skills-images {
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 0;
+    padding: 20px;
 }
 
 .skills {
@@ -559,13 +569,9 @@ section h3 {
 
 .certifications {
     width: 100%;
-}
-
-.certifications h2 {
-    background: var(--Grey);
-    color: var(--White);
-    font-size: 15px;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.75)
 }
 
 .certifications ul{
