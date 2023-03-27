@@ -3,8 +3,8 @@ document.addEventListener('click', tabClick);
 function tabClick(event) {
     var elem = event.target,
         elemHREF = elem.getAttribute('href'),
-        tabs = document.querySelector('.cv-tab li a'),
-        tabContents = document.querySelectorAll('.tab-contents section');
+        tabs = document.querySelector('.cv-tab a'),
+        tabContents = document.querySelectorAll('.active');
 
     if (elemHREF != null && elemHREF.indexOf('tab-') != -1) {
         event.preventDefault();

@@ -15,19 +15,20 @@
 
 body {
     background: var(--White);
-    color: var(--Grey)
+    color: var(--Grey);
     font-family: comfortaa, 20thcentury font, poppins;
     font-size: 14px;
 }
 
 .bio {
     display: flex;
-    background-image: url(../Images/Tayo_background.jpg);
-    -webkit-background-size: cover;
+    /*background-image: url(../Images/Tayo_background.jpg);*/
+    /*background-image: linear-gradient(45deg, rgba(0, 255, 255, 0.041), rgba(220, 20, 60, 0.062), #dd9f0e0c);
+    -webkit-background-size: cover;*/
     background-size: cover;
     background-position: center;
+    background-color: #000;
     width: 100%;
-    height: 80vh;
     margin: 10px auto;
     padding: 0;
     position: relative;
@@ -38,9 +39,17 @@ body {
     content: "";
     position: absolute;
     width: 100%;
-    height: 80vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    mix-blend-mode: multiply;
+    height: 100%;
+    background: linear-gradient(35deg, rgba(0, 22, 54, 0.164) 50%, black 50%, black);
+    z-index: -2;
+}
+
+.bio::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, rgba(0, 22, 54, 0.164) 50%, black 50%, black);
     z-index: -2;
 }
 
@@ -74,6 +83,8 @@ body {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.95),
+                0 3px 6px rgba(0, 0, 0, 0.95);
 }
 
 .bio-text {
@@ -82,8 +93,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 50px;
-    background-image: rgba(0, 0, 0, 0.95);
-    background-color: rgba(0, 0, 0, 0.45);
+    background-image: linear-gradient(45deg, #dd9f0e17, rgba(220, 20, 60, 0.096), rgba(0, 255, 255, 0.116));
     background-blend-mode: multiply;
     border-radius: 15px;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.95);
@@ -111,7 +121,8 @@ body {
     background-color: rgba(0, 0, 0, 0.25);
     background-blend-mode: multiply;
     padding: 15px 10px;
-    margin: 5px auto;
+    margin: 25px auto;
+    font-family: '20th century font';
     font-size: 18px;
     text-align: center;
     justify-content: center;
@@ -119,6 +130,20 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.55);
     border-radius: 15px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.h1 h6 {
+    width: 80%;
+    color: var(--White);
+    padding: 0 15px 12px;
+    letter-spacing: 0.3em;
+    margin: 5px auto;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.55);
 }
 
 .cv {
@@ -134,26 +159,29 @@ body {
     margin: 5px auto;
 }
 
-.cv h1 {
+.cv-h1 {
     width: 100%;
     padding: 10px 50px;
     font-size: 15px;
     text-transform: uppercase;
     text-align: center;
-    background: #dd9f0e44;
-    background-blend-mode: multiply;
-    color: rgba(0, 0, 0, 0.85);
+    background: linear-gradient(45deg, #dd9f0e28, rgba(220, 20, 60, 0.178), rgba(0, 255, 255, 0.171));
     border-radius: 15px;
+    background-blend-mode: multiply;
+    color: #ffffffd5;
     box-shadow: 1px 1px 4px var(--Black),
                 -1px -1px 3px rgba(0, 0, 0, 0.35);
 }
 
-.cv h1:hover {
+.cv-h1:hover {
     padding: 10.2px 50.2px;
-    font-size: 15.2px;
-    background: #dd9f0e96;
-    color: rgba(0, 0, 0, 0.85);
-    border: solid 2px rgba(0, 0, 0, 0.925);
+    font-size: 14.5px;
+    color: #fffffff1;
+    border: solid 2px;
+    border-color: transparent;
+    background: linear-gradient(#ffffff1a, #ffffff1a) padding-box,
+                linear-gradient(45deg, #dd9f0e73 30%, rgba(220, 20, 60, 0.411) 30% 60%, rgba(0, 255, 255, 0.521) 60%) border-box;
+    border-radius: 15px;
     cursor: pointer;
     box-shadow: inset 2px 2px 5px var(--Black),
                 inset -1px -1px 3px rgba(0, 0, 0, 0.35);
@@ -164,16 +192,18 @@ body {
     width: 60%;
     display: flex;
     margin: 5px;
+    margin-bottom: 0;
 }
 
 .portfolios a {
     text-decoration: none;
     justify-content: center;
     align-items: center;
-    margin: 5px auto;
+    margin: 0 20px auto;
+    margin-bottom: -20px
 }
 
-.portfolios h1 {
+/*.portfolios h1 {
     width: 100%;
     padding: 10px 35px;
     font-size: 15px;
@@ -189,15 +219,112 @@ body {
 
 .portfolios h1:hover {
     padding: 10.2px 35.2px;
-    font-size: 15.2px;
-    background: #dd9f0e96;
+    font-size: 14.5px;
+    background: #dd9f0e15;
     background-blend-mode: multiply;
-    color: rgba(0, 0, 0, 0.85);
-    border: solid 2px rgba(0, 0, 0, 0.925);
+    color: coral;
+    border: solid 2px coral;
     cursor: pointer;
     box-shadow: inset 2px 2px 5px var(--Black),
                 inset -1px -1px 3px rgba(0, 0, 0, 0.35);
-    transition: all 500ms ease-in;
+    transition: all 300ms ease-in-out;
+}*/
+
+.portfolios a:nth-child(1) {
+    width: 150px;
+    margin-left: 0;
+}
+
+.portfolios a h1:nth-child(1) {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    margin-left: -5px;
+    padding: 10px 30px;
+    background-color: #dd9f0e5e;
+    background-blend-mode: multiply;
+    color: #dd9f0e;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px var(--Black),
+                -1px -1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.portfolios a h1:nth-child(1):hover {
+    font-size: 11.5px;
+    padding: 10.2px 30.2px;
+    background: #dd9f0e21;
+    background-blend-mode: multiply;
+    color: coral;
+    border: solid 2px coral;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 5px var(--Black),
+                inset -1px -1px 3px rgba(0, 0, 0, 0.35);
+    transition: all 300ms ease-in-out;
+}
+
+.portfolios a:nth-child(2) {
+    width: 150px;
+    margin-left: 60px;
+}
+
+.portfolios a h1:nth-child(2) {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 30px;
+    background-color: rgba(220, 20, 60, 0.589);
+    background-blend-mode: multiply;
+    color: #dd9f0e;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px var(--Black),
+                -1px -1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.portfolios a h1:nth-child(2):hover {
+    font-size: 11.5px;
+    padding: 10.2px 30.2px;
+    background-color: rgba(220, 20, 60, 0.212);
+    background-blend-mode: multiply;
+    color: coral;
+    border: solid 2px coral;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 5px var(--Black),
+                inset -1px -1px 3px rgba(0, 0, 0, 0.35);
+    transition: all 300ms ease-in-out;
+}
+
+.portfolios a:nth-child(3) {
+    width: 150px;
+    margin-left: 70px;
+}
+
+.portfolios a h1:nth-child(3) {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 30px;
+    background-color: rgba(0, 255, 255, 0.644);
+    background-blend-mode: multiply;
+    color: #dd9f0e;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px var(--Black),
+                -1px -1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.portfolios a h1:nth-child(3):hover {
+    font-size: 11.5px;
+    padding: 10.2px 30.2px;
+    background-color: rgba(0, 255, 255, 0.164);
+    background-blend-mode: multiply;
+    color: coral;
+    border: solid 2px coral;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 5px var(--Black),
+                inset -1px -1px 3px rgba(0, 0, 0, 0.35);
+    transition: all 300ms ease-in-out;
 }
 
 .p {
@@ -207,6 +334,39 @@ body {
     align-items: center;
     margin: 20 auto;
     padding: 10px 150px;
+}
+
+.sections {
+    display: flex;
+    width: 100%;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 150px;
+}
+
+.sections section {
+    width: 33%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.sections section:nth-child(1) {
+    background-color: #dd9f0e;
+}
+
+.sections section:nth-child(2) {
+    background-color: crimson;
+}
+
+.sections section:nth-child(3) {
+    background-color: aqua;
+}
+
+.sections section p {
+    color: #000;
+    text-align: justify;
+    margin: 10px;
 }
 
 .circle {
@@ -268,6 +428,14 @@ body {
     }
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin: auto;
+}
+
 /*.border {
     position: relative;
     margin: 0;
@@ -301,14 +469,6 @@ body {
     z-index: 100;
 }*/
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    margin: auto;
-}
-
 .contacts {
     display: flex;
     flex-direction: column;
@@ -320,17 +480,22 @@ body {
 }
 
 .contacts span {
-    font-size: 25px;
-    color: var(--Black);
-    padding: 10px;
-    padding-bottom: 0;
+    font-size: 20px;
+    color: var(--White);
+    padding: 5px 10px;
 }
 
 .contacts section {
-    font-size: 22px;
+    font-size: 18px;
     color: var(--White);
-    padding: 10px;
-    padding-bottom: 0;
+    padding: 5px 10px;
+    border: 1px solid #dd9f0e;
+    border-radius: 10px;
+}
+
+.contacts section:hover {
+    border: 1px solid coral;
+    transition: all 300ms ease-in-out;
 }
 
 .socials {
@@ -339,7 +504,7 @@ body {
 
 .socials ul {
     display: flex;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 .socials ul li {
@@ -350,6 +515,26 @@ body {
 .socials ul li a {
     color: var(--Gold);
     text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.socials ul li a:hover {
+    color: coral;
+    text-decoration: none;
+    font-size: 15.2px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+footer {
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    border-top: solid 2px;
+    border-image: linear-gradient(45deg, #dd9f0e 30%, rgb(220, 20, 60) 30% 70%, rgba(0, 255, 255, 0.521) 70%) 1;
 }
 
 .cv-tab {
@@ -359,18 +544,19 @@ body {
     background: rgba(0, 0, 0, 0.75);
 }
 
-.cv-tab h2 {
+.cv-tab a {
     padding: 10px;
     margin: 18px auto;
     color: #dd9f0e;
     font-size: 18px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.55);
     text-align: center;
+    text-decoration: none;
     justify-content: center;
     align-items: center;
 }
 
-.cv-tab h2:hover {
+.cv-tab a:hover {
     padding: 10px 30px;
     font-size: 18.2px;
     color: rgba(0, 0, 0, 0.85);
@@ -439,12 +625,17 @@ body {
     mix-blend-mode: multiply;
 }*/
 
-.job-experience, .education {
+.active, .education {
+    display: flex;
     width: 100%;
     padding: 10px 20px;
 }
 
-.job-experience ul, .education ul {
+.visible {
+    display: flex;
+}
+
+.active ul, .education ul {
     padding: 20px 40px;
     margin: 20px auto;
     background-color: #ffffffe1;
@@ -463,7 +654,7 @@ body {
     z-index: -2;
 }*/
 
-.job-experience li, .education li {
+.active li, .education li {
     display: inline-block;
     list-style-type: none;
     padding: 10px;
@@ -479,7 +670,7 @@ body {
     border-bottom: 2px solid blue;
 }
 
-.job-experience ul li span, .education ul li span {
+.active ul li span, .education ul li span {
     width: 150px;
     font-size: 10px;
     color: var(--Black);
@@ -488,7 +679,7 @@ body {
     border-left: 2px solid var(--Black);
 }
 
-.job-experience p, .education p {
+.active p, .education p {
     text-align: justify;
     padding: 20px;
     color: var(--Grey);
@@ -501,7 +692,7 @@ section h3 {
     color: var(--Grey);
 }
 
-.job-experience section ul {
+.active section ul {
     margin: 20px auto;
     padding-top: 0;
     margin-top: 0;
@@ -511,7 +702,7 @@ section h3 {
     box-shadow: none;
 }
 
-.job-experience section ul li {
+.active section ul li {
     list-style-type: circle;
     color: var(--Grey);
     font-size: 14px; 
@@ -565,6 +756,14 @@ section h3 {
     margin: 5px auto;
     justify-content: center;
     align-items: center;
+}
+
+.skills img:hover {
+    width: 63%;
+    margin: 5px auto;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
 }
 
 .certifications {
