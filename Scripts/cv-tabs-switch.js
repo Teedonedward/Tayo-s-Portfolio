@@ -1,22 +1,37 @@
-document.addEventListener('click', tabClick);
+let item1 = document.getElementById("item-1");
+let item2 = document.getElementById("item-2");
+let item3 = document.getElementById("item-3");
+let text1 = document.getElementById("item-1").innerHTML.toUpperCase();
+let text2 = document.getElementById("item-2").innerHTML.toUpperCase();
+let text3 = document.getElementById("item-3").innerHTML.toUpperCase();
+let tabs = document.querySelectorAll(".active");
 
-function tabClick(event) {
-    var elem = event.target,
-        elemHREF = elem.getAttribute('href'),
-        tabs = document.querySelector('.cv-tab a'),
-        tabContents = document.querySelectorAll('.active');
-
-    if (elemHREF != null && elemHREF.indexOf('tab-') != -1) {
-        event.preventDefault();
-
-        if (elem.className.indexOf('active') == -1) {
-            for (1 = 0; 1 < tabs.length; 1++) {
-                tabs[1].classList.remove('active');
-                tabContents[1].classList.remove('visible');
-            }
-
-            elem.classList.add('active');
-            document.getElementById(elemHREF).classList.add('visible');
-        }
+item1.addEventListener("click", () => {
+    if (item1.innerText.includes(text1.toUpperCase())) {
+        tabs[index].classList.add("active");
     }
-}
+    else
+    {
+        tabs[index].classList.add("hide");
+    }
+});
+
+item2.addEventListener("click", () => {
+    if (item2.innerText.includes(text2.toUpperCase())) {
+        tabs[index].classList.add("active");
+    }
+    else
+    {
+        tabs[index].classList.add("hide");
+    }
+});
+
+item3.addEventListener("click", () => {
+    if (item3.innerText.includes(text3.toUpperCase())) {
+        tabs[index].classList.add("active");
+    }
+    else
+    {
+        tabs[index].classList.add("hide");
+    }
+});

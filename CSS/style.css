@@ -778,3 +778,39 @@ section h3 {
     display: flex;
     flex-direction: column;
 }
+
+/* Architecture Page */
+
+.top-view {
+    display: flex;
+    width: 100vw;
+    background-image: linear-gradient(45deg, #0e0505, #131313, #020c0b, #000);
+    margin: auto;
+    padding: 20px;
+}
+
+.top-view img {
+    width: 95%;
+    margin: 0 auto;
+    border: solid 5px;
+    border-color: transparent;
+    background: linear-gradient(45deg, #1a1a1a, #18968f, #000, #000) padding-box,
+                linear-gradient(45deg,  #18968f, #000, #000, #1a1a1a) border-box;
+    border-radius: 15px;
+}
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.body div {
+    margin: 20px auto;
+}
+
+.body div img {
+    width: 60%;
+    margin: auto;
+}
