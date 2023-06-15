@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue-accent: #00b7ff;
+    --White: #fff;
+    --Black: #000;
+    --lite-Grey: #f4f4f4;
+    --Grey: #555555;
+    --Shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+body {
+    background: #004059;
+    background-blend-mode: multiply;
+    backdrop-filter: blur(15px);
+    color: var(--Grey);
+    font-family: comfortaa, 20thcentury font, poppins;
+    font-size: 14px;
+}
+
+.cv-tab {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.cv-tab a {
+    padding: 10px 30px;
+    margin: 18px auto;
+    color: var(--Blue-accent);
+    background-color: #00b7ff22;
+    backdrop-filter: blur(15px);
+    background-blend-mode: multiply;
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.55);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px var(--Black);
+    transition: all 250ms ease-in;
+}
+
+.cv-tab a:hover {
+    padding: 10px 30.2px;
+    font-size: 18.2px;
+    color: var(--Black);
+    background: #00b7ff60;
+    backdrop-filter: blur(15px);
+    background-blend-mode: multiply;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px var(--Black)
+}
+
+.title {
+    width: 20%;
+    padding: 20px;
+    padding-left: 40px;
+    padding-bottom: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: -30px;
+    color: var(--Blue-accent);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.75);
+    background-color: #ffffffe1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 5px 5px 8px var(--Black),
+                -1px -1px 3px rgba(0, 0, 0, 0.35);
+    position: relative;
+    background-blend-mode: multiply;
+
+}
+
+.title-1 {
+    width: 20%;
+    padding: 15px;
+    padding-left: 40px;
+    margin: 20px;
+    margin-left: 0;
+    color: #dd9f0e;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.75);
+    background-color: #f0f0f0cc;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px var(--Grey),
+                1px 1px 3px var(--Grey);
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+.experience {
+    width: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.75);
+    isolation: isolate;
+}
+
+#architecture, #design, #programming, .education {
+    width: 100%;
+    padding: 10px 20px;
+    transition: all 250ms ease-in-out;
+}
+
+#architecture ul, #design ul, #programming ul, .education ul {
+    padding: 20px 40px;
+    margin: 20px auto;
+    background-color: #ffffffe1;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 5px 5px 5px var(--Black);
+    position: relative;
+}
+
+#architecture li, #design li, #programming li, .education li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    text-decoration: none;
+    color: var(--Black);
+    font-weight: bold;
+    border-bottom: 2px solid var(--Gold);
+}
+
+.education li {
+    border-bottom: 2px solid blue;
+}
+
+#architecture ul li span, #design ul li span, #programming ul li span, .education ul li span {
+    width: 150px;
+    font-size: 10px;
+    color: var(--Black);
+    padding-left: 20px;
+    float: right;
+    border-left: 2px solid var(--Black);
+}
+
+#architecture p, #design p, #programming p, .education p {
+    text-align: justify;
+    padding: 20px;
+    color: var(--Grey);
+}
+
+.section h3 {
+    padding: 10px 40px;
+    padding-top: 0;
+    font-size: 18px;
+    color: var(--Grey);
+}
+
+#architecture section ul, #design section ul, #programming section ul {
+    margin: 20px auto;
+    padding-top: 0;
+    margin-top: 0;
+    background-color: #ffffff1f;
+    background-blend-mode: multiply;
+    border-radius: none;
+    box-shadow: none;
+}
+
+#architecture section ul li, #design section ul li, #programming section ul li {
+    list-style-type: circle;
+    color: var(--Grey);
+    font-size: 14px; 
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    border: none;
+    font-weight: unset;
+    line-height: 1.5em;
+}
+
+.skills-images {
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 0;
+    padding: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.skills-h2 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+}
+
+.skills ul {
+    display: flex;
+    margin: 10px;
+    padding: 0px 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills ul li {
+    color: var(--White);
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    width: 7%;
+    margin: 0 auto;
+}
+
+.skills img {
+    width: 60%;
+    margin: 5px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.certifications {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.certifications ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}

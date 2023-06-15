@@ -2,22 +2,23 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../CSS/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../CSS/cv.css" type="text/css" media="all" />
     <title>Tayo Oyetola's CV</title>
     <script src="../Scripts/alert-2.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../Scripts/cv-tabs-switch.js" type="text/javascript" charset="utf-8"></script>
+    <script defer src="../Scripts/switch-tabs.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 
 <body>
     <div class="experience">
         <div class="cv-tab">
-            <a class="item" id="item-1" href="#">Architecture</a>
-            <a class="item" id="item-2" href="#">Design</a>
-            <a class="item" id="item-3" href="#">Programming</a>
+            <a class="architecture" id="archi" href="#">Architecture</a>
+            <a class="design" id="des" href="#">Design</a>
+            <a class="programming" id="program" href="#">Programming</a>
         </div>
         <div>
             <div class="title">Work Experience</div>
-            <div class="active">
+            <div class="visible" id="architecture">
                 <ul>
                     <li>Paul Thompson & Co<span>Aug 2016 - Jan 2017</span></li>
                     <p>
@@ -146,18 +147,39 @@
                     </p>
                 </ul>
             </div>
-            <div class="active">
+            <div class="hidden" id="design">
                 <ul>
-                    <li>Paul Thompson & Co<span>Aug 2016 - Jan 2017</span></li>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur facere ipsum eos officiis
-                        possimus aspernatur, perspiciatis distinctio maiores accusantium illum iure amet, sapiente nam
-                        excepturi, atque, corrupti. Temporibus, cum, nam!
-                    </p>
-                    <li>Amistad Properties Ltd<span>Feb 2017 - Jan 2017</span></li>
+                    <li>Pride Media<span>March 2017 - Jan 2019</span></li>
                     <p>
                         <section>
-                            <h3>Tittle: Architect and Project Manager</h3>
+                            <h3>Tittle: Design Intern</h3>
+                            <h3>Responsibilities:</h3>
+                            <ul>
+                                <li>Conceptualization and creation of new ideas and designs.</li>
+                                <li>Drafted, designed, prepared and presented designs to board and relevant
+                                    authorities for additions, correction and approvals.</li>
+                                <li>Prepared construction drawings and documents for construction use.</li>
+                                <li>Created and presented visuals.</li>
+                                <li>Procured and inspected materials quality.</li>
+                                <li>Managed projects and supervision of existing and new constructions.</li>
+                                <li>Interpreted drawings to work men and all relevants takeholders.</li>
+                            </ul>
+                            <h3>Keyachievements</h3>
+                            <ul>
+                                <li>Successfully integrated and used a scheduling and a ccounting software
+                                    into workflow and operations</li>
+                                <li>Designed, constructed, managed and supervised a 10 by 10 semi-detached single roomapartmentsforcommercialpurpose.</li>
+                                <li>Design of a proposed condominium comprising about 30 studio and
+                                    single room apartments.</li>
+                                <li>Designed, constructed, managed and supervised three-bedroom
+                                    residential apartment, semi-detached.</li>
+                            </ul>
+                        </section>
+                    </p>
+                    <li>Wicecom Publishers<span>March 2017 - Jan 2019</span></li>
+                    <p>
+                        <section>
+                            <h3>Tittle: Design and Printing Assistant</h3>
                             <h3>Responsibilities:</h3>
                             <ul>
                                 <li>Conceptualization and creation of new ideas and designs.</li>
@@ -221,7 +243,7 @@
                             </ul>
                         </section>
                     </p>
-                    <li>Sage Designs Limited<span>Jun 2021 - Nov 2021</span></li>
+                    <li>Bola Branding Agency<span>Jun 2021 - to present</span></li>
                     <p>
                         <section>
                             <h3>Tittle: Project Manager</h3>
@@ -275,9 +297,9 @@
                     </p>
                 </ul>
             </div>
-            <div class="active">
+            <div class="hidden" id="programming">
                 <ul>
-                    <li>Paul Thompson & Co<span>Aug 2016 - Jan 2017</span></li>
+                    <li>CCC & Co<span>Aug 2016 - Jan 2017</span></li>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur facere ipsum eos officiis
                         possimus aspernatur, perspiciatis distinctio maiores accusantium illum iure amet, sapiente nam
@@ -419,7 +441,7 @@
             </div>
         </div>
     </div>
-    <div class="skills-images">
+    <div class="skills-images"> 
         <div class="title-1">Skills</div>
         <div class="skills">
             <div class="skills-img">
@@ -456,9 +478,7 @@
                 <li><img src="" alt="" /></li>
                 <li><img src="" alt="" /></li>
             </ul>
-        </ul>
-    </div>
-    <div>
-        <footer>Teedon 2023</footer>
+        </ul> 
+        <a id="back-to-top" href="#">Top</a>
     </div>
 </body>
